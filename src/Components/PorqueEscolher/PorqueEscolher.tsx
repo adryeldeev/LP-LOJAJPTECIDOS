@@ -4,7 +4,7 @@ import tecidoImage from "../../assets/Img/imgSobre.png"; // substitua pelo camin
 
 const PorQueEscolher = () => {
   return (
-    <section className="w-full bg-white py-16 px-6 md:px-24 flex flex-col md:flex-row items-center gap-12">
+    <section className="w-full bg-[#F9F9F9] py-16 px-6 md:px-24 flex flex-col md:flex-row items-center gap-12">
       
       {/* Texto */}
       <div className="md:w-1/2">

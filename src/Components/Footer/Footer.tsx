@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaWhatsapp, FaPhone, FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaPhone, FaMapMarkerAlt, FaClock, FaPaperPlane } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -7,11 +7,33 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
         
         {/* Identidade */}
-        <div>
+        <div className="flex flex-col">
           <h2 className="text-white text-2xl font-bold">JP Tecidos</h2>
           <p className="text-sm mt-2">
             Tecidos de qualidade para moda, artesanato e decoração.
           </p>
+          <div className="flex flex-col  gap-10 pt-20 ">
+        
+        {/* Texto da esquerda */}
+        <div className="flex flex-col justify-center text-white">
+          <h4 className="text-lg font-semibold">Newsletter</h4>
+          <span className="text-sm text-gray-300">
+            Informe seu e-mail para receber todas as novidades
+          </span>
+        </div>
+
+        {/* Input e botão */}
+        <div className="flex gap-3 items-center">
+          <input
+            type="email"
+            placeholder="Insira seu e-mail"
+            className="flex-1 bg-white rounded-full px-5 py-3 focus:outline-none text-sm text-gray-700 placeholder-gray-400"
+          />
+          <button className="cursor-pointer flex items-center gap-2 bg-[#f26522] hover:bg-[#d9531f] text-white text-sm font-medium px-5 py-3 rounded-full transition">
+            Enviar <FaPaperPlane size={14} />
+          </button>
+        </div>
+      </div>
         </div>
         
         {/* Contato */}
@@ -32,7 +54,7 @@ const Footer = () => {
         </div>
         
         {/* Redes Sociais */}
-        <div>
+        <div className="flex flex-col">
           <h3 className="text-white text-lg font-medium">Siga-nos</h3>
           <div className="flex gap-4 mt-2 text-2xl">
             
@@ -52,8 +74,11 @@ const Footer = () => {
             >
               <FaWhatsapp />
             </a>
+           
           </div>
+         
         </div>
+      
       </div>
 
       {/* Linha final */}
