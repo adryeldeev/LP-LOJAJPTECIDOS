@@ -1,4 +1,5 @@
-
+import React from "react";
+import axios from "axios";
 import {  FaWhatsapp, FaPhone, FaMapMarkerAlt, FaClock, FaPaperPlane } from "react-icons/fa";
 
 const Footer = () => {
@@ -6,6 +7,30 @@ const Footer = () => {
   const mensagem = "Olá! Gostaria de mais informações."; // mensagem inicial
 
   const linkWhatsapp = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+  const [email, setEmail] = React.useState("");
+  const [error , setError] = React.useState<string | null>(null);
+  const SubmitEmail = async () => {
+    // Lógica para enviar o e-mail
+    if(email.trim() === "") {
+      alert("Por favor, insira um e-mail válido.");
+      return;
+    }
+    try {
+      const response = await axios.post('/api/newsletter', { email })
+      if (response.status === 200) {
+        alert("E-mail cadastrado com sucesso!");
+        setEmail("");
+        setError(null); // Limpa qualquer erro anterior
+      }else{
+        setError('Ocorreu um erro ao cadastrar o e-mail. Tente novamente.');
+      }
+
+    } catch (error){
+      console.error('Erro:', error);
+      setError('Ocorreu um erro no servidor. Tente novamente.');
+    }
+  }
+
 
   return (
     <footer className="bg-[#212529] text-gray-300 py-10">
@@ -33,11 +58,14 @@ const Footer = () => {
             type="email"
             placeholder="Insira seu e-mail"
             className="flex-1 bg-white rounded-full px-5 py-3 focus:outline-none text-sm text-gray-700 placeholder-gray-400"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <button className="cursor-pointer flex items-center gap-2 bg-[#f26522] hover:bg-[#d9531f] text-white text-sm font-medium px-5 py-3 rounded-full transition">
+          <button className="cursor-pointer flex items-center gap-2 bg-[#f26522] hover:bg-[#d9531f] text-white text-sm font-medium px-5 py-3 rounded-full transition" onClick={() => SubmitEmail()}>
             Enviar <FaPaperPlane size={14} />
           </button>
         </div>
+        {error && <div className="text-red-500 text-sm mt-2">{error}</div>}
       </div>
         </div>
         
