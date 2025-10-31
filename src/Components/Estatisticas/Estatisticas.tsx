@@ -1,4 +1,4 @@
-import React from 'react'
+
 import tempo from '../../assets/Img/hourglass.png'
 import apertoDeMao from '../../assets/Img/aperto-de-mao.png'
 import caixa from '../../assets/Img/caixa.png'

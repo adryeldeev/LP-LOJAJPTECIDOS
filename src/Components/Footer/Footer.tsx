@@ -1,7 +1,12 @@
-import React from "react";
+
 import { FaInstagram, FaWhatsapp, FaPhone, FaMapMarkerAlt, FaClock, FaPaperPlane } from "react-icons/fa";
 
 const Footer = () => {
+  const numero = "+5585985661823"; // coloque o número com DDI + DDD, ex: 55 11 91234-5678
+  const mensagem = "Olá! Gostaria de mais informações."; // mensagem inicial
+
+  const linkWhatsapp = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
   return (
     <footer className="bg-[#212529] text-gray-300 py-10">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -41,7 +46,7 @@ const Footer = () => {
           <h3 className="text-white text-lg font-medium">Contato</h3>
           <ul className="mt-2 space-y-2 text-sm">
             <li className="flex items-center gap-2">
-              <FaPhone /> (85) 99999-9999
+              <FaPhone /> (85) 98566-1823
             </li>
             
             <li className="flex items-center gap-2">
@@ -67,7 +72,7 @@ const Footer = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://wa.me/5511999999999"
+              href={linkWhatsapp}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"

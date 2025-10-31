@@ -1,4 +1,4 @@
-import React from 'react'
+
 import imgSobre from '../../assets/Img/imgSobre.png'
 
 const Sobre = () => {

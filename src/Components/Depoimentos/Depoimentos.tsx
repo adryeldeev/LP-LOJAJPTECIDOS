@@ -1,18 +1,23 @@
-import React from 'react'
+import homemDeponimento from '../../assets/Img/homem-depoimento1.jpg';
+import homemDeponimento2 from '../../assets/Img/homem-depoimento2.jpg';
+import mulherDeponimento from '../../assets/Img/mulher-depoimento.jpg'; 
 
 const Depoimentos = () => {
   const depoimentos  = [
     {
-      nome: "Maria S",
-      descricao: "“Excelente qualidade e ótimo atendimento. Sempre compro aqui.”"
+      nome: "Carlos S.",
+      descricao: "“Excelente qualidade e ótimo atendimento. Sempre compro aqui.”",
+      imagem: homemDeponimento
     },
     {
       nome: "João P.",
-      descricao: "“Excelente qualidade e ótimo atendimento. Sempre compro aqui.”"
+      descricao: "“Excelente qualidade e ótimo atendimento. Sempre compro aqui.”",
+      imagem: homemDeponimento2
     },
     {
       nome: "Carla R.",
-      descricao: "“Excelente qualidade e ótimo atendimento. Sempre compro aqui.”"
+      descricao: "“Excelente qualidade e ótimo atendimento. Sempre compro aqui.”",
+      imagem: mulherDeponimento
     },
   ]
 
@@ -29,7 +34,7 @@ const Depoimentos = () => {
             className="flex flex-col items-center text-center bg-[#212529] p-6 rounded-lg transition-all duration-300 hover:bg-orange-500 hover:text-white cursor-pointer"
           >
             {/* Círculo de avatar */}
-            <div className="w-16 h-16 bg-gray-300 rounded-full mb-4"></div>
+            <img className="w-16 h-16 bg-gray-300 rounded-full mb-4 " src={item.imagem} />
 
             {/* Nome */}
             <h4 className="font-semibold text-white mb-2 transition-colors duration-300">

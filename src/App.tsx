@@ -8,6 +8,7 @@ import Localizacao from "./Components/Localizacao/Localizacao"
 import Footer from "./Components/Footer/Footer"
 import PorQueEscolher from "./Components/PorqueEscolher/PorqueEscolher"
 import BotaoWhatsapp from "./Components/BotaoWhatsapp/BotaoWhtasapp"
+import Beneficios from "./Components/Beneficios/Beneficios"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Sobre/>
       <Servicos/>
       <Depoimentos/>
+      <Beneficios/>
       <Localizacao/>
       <PorQueEscolher/>
 

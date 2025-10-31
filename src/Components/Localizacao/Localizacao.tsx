@@ -1,4 +1,4 @@
-import React from 'react'
+
 import mapaLocalizacao from '../../assets/Img/MapaFundoRemovido.png'
 const Localizacao = () => {
   return (

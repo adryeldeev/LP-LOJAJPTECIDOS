@@ -1,8 +1,8 @@
-import React from "react";
+
 import { FaWhatsapp } from "react-icons/fa";
 
 const BotaoWhatsapp = () => {
-  const numero = "5599999999999"; // coloque o número com DDI + DDD, ex: 55 11 91234-5678
+  const numero = "+5585985661823"; // coloque o número com DDI + DDD, ex: 55 11 91234-5678
   const mensagem = "Olá! Gostaria de mais informações."; // mensagem inicial
 
   const linkWhatsapp = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;

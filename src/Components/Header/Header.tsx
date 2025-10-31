@@ -4,6 +4,11 @@ import vector from '../../assets/Img/Vector1.png'
 
 
 const Header = () => {
+  const numero = "+5585985661823"; // coloque o número com DDI + DDD, ex: 55 11 91234-5678
+  const mensagem = "Olá! Gostaria de mais informações."; // mensagem inicial
+
+  const linkWhatsapp = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
   return (
     <header className="w-full">
       <div className="grid grid-cols-1 md:grid-cols-2 w-full relative">
@@ -25,10 +30,10 @@ const Header = () => {
             <p className="mt-4 text-base md:text-lg text-gray-300 max-w-md">
               Há mais de 20 anos fornecendo jeans, retalhos e algodãozinho em Fortaleza.
             </p>
-            <button className="cursor-pointer mt-6 flex items-center gap-2 bg-[#FC6E20] text-white font-medium px-6 py-3 rounded-full hover:bg-[#e55d15] transition">
+            <a href={linkWhatsapp} className="cursor-pointer mt-6 flex items-center gap-2 bg-[#FC6E20] text-white font-medium px-6 py-3 rounded-full hover:bg-[#e55d15] transition">
               Peça um orçamento
               <FaWhatsapp className="text-2xl" />
-            </button>
+            </a>
           </div>
         </div>
 

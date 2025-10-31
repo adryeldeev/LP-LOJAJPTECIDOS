@@ -1,8 +1,13 @@
-import React from "react";
+
 import { FaCheck } from "react-icons/fa";
-import tecidoImage from "../../assets/Img/imgSobre.png"; // substitua pelo caminho da sua imagem
+import tecidoImage from "../../assets/Img/jpTecidos.webp"; // substitua pelo caminho da sua imagem
 
 const PorQueEscolher = () => {
+  const numero = "+5585985661823"; // coloque o número com DDI + DDD, ex: 55 11 91234-5678
+  const mensagem = "Olá! Gostaria de mais informações."; // mensagem inicial
+
+  const linkWhatsapp = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
   return (
     <section className="w-full bg-[#F9F9F9] py-16 px-6 md:px-24 flex flex-col md:flex-row items-center gap-12">
       
@@ -36,12 +41,10 @@ const PorQueEscolher = () => {
         </ul>
 
         <div className="flex flex-wrap gap-4">
-          <button className="cursor-pointer flex items-center gap-2 bg-[#f26522] hover:bg-[#d9531f] text-white text-sm font-medium px-5 py-3 rounded-full transition">
-            Saiba mais
-          </button>
-          <button className="cursor-pointer flex items-center gap-2 bg-[#f26522] hover:bg-[#d9531f] text-white text-sm font-medium px-5 py-3 rounded-full transition">
+         
+          <a href={linkWhatsapp} className="cursor-pointer flex items-center gap-2 bg-[#f26522] hover:bg-[#d9531f] text-white text-sm font-medium px-5 py-3 rounded-full transition">
             Faça um orçamento
-          </button>
+          </a >
         </div>
       </div>
 
@@ -51,7 +54,7 @@ const PorQueEscolher = () => {
           src={tecidoImage} 
           alt="Loja JP Tecidos" 
           className="w-full rounded-lg shadow-lg"
-        />
+        />,
       </div>
 
     </section>

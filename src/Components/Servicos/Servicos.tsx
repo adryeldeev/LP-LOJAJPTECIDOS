@@ -1,4 +1,4 @@
-import React from 'react'
+
 import retalhos from '../../assets/Img/retalhos.png'
 import rolos from '../../assets/Img/rolos.png'
 import algodaozinho from '../../assets/Img/algodaozinho.png'
