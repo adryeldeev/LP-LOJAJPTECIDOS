@@ -1,5 +1,5 @@
 
-import { FaInstagram, FaWhatsapp, FaPhone, FaMapMarkerAlt, FaClock, FaPaperPlane } from "react-icons/fa";
+import {  FaWhatsapp, FaPhone, FaMapMarkerAlt, FaClock, FaPaperPlane } from "react-icons/fa";
 
 const Footer = () => {
   const numero = "+5585985661823"; // coloque o número com DDI + DDD, ex: 55 11 91234-5678
@@ -63,14 +63,7 @@ const Footer = () => {
           <h3 className="text-white text-lg font-medium">Siga-nos</h3>
           <div className="flex gap-4 mt-2 text-2xl">
             
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition"
-            >
-              <FaInstagram />
-            </a>
+           
             <a
               href={linkWhatsapp}
               target="_blank"
