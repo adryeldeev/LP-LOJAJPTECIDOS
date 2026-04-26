@@ -18,11 +18,13 @@ const Localizacao = () => {
               <p className='section-text text-gray-100 md:max-w-2xl'>
                 Está com dificuldades para tomar uma decisão?
                 <br />
-                Ligue para +91 999999. Nossos especialistas terão prazer em ajudá-lo gratuitamente.
+                Ligue para (85) 98566-1823. Nossos especialistas terão prazer em ajudá-lo gratuitamente.
               </p>
 
               <a
-                href='tel:+91999999'
+                href='https://wa.me/5585985661823'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='mx-auto inline-flex w-fit items-center justify-center rounded-full bg-[#ff6a1a] px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#ff7e38] md:mx-0 md:text-base'
               >
                 Falar com um especialista

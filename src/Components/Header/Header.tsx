@@ -24,10 +24,10 @@ const Header = () => {
             <p className="mt-4 text-base md:text-lg text-gray-300 max-w-md">
               Há mais de 20 anos fornecendo jeans, retalhos e algodãozinho em Fortaleza.
             </p>
-            <button className="cursor-pointer mt-6 flex items-center gap-2 bg-[#FC6E20] text-white font-medium px-6 py-3 rounded-full hover:bg-[#e55d15] transition">
+            <a href="https://wa.me/5585985661823" target="_blank" rel="noopener noreferrer" className="cursor-pointer mt-6 flex items-center gap-2 bg-[#FC6E20] text-white font-medium px-6 py-3 rounded-full hover:bg-[#e55d15] transition">
               Peça um orçamento
               <FaWhatsapp className="text-2xl" />
-            </button>
+            </a>
           </div>
         </div>
 

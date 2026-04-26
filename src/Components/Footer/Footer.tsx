@@ -15,7 +15,7 @@ const Footer = () => {
           <h3 className="text-lg font-medium text-white">Contato</h3>
           <ul className="mt-2 space-y-2 text-sm text-gray-300 inline-flex flex-col items-center md:items-start">
             <li className="flex items-center gap-2">
-              <FaPhone /> (85) 99999-9999
+              <FaPhone /> (85) 98566-1823
             </li>
             <li className="flex items-center gap-2">
               <FaMapMarkerAlt /> Rua Raimundo Neri, 567 - Parque São José, Fortaleza - CE, 60730-220
@@ -38,7 +38,7 @@ const Footer = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5585985661823"
               target="_blank"
               rel="noopener noreferrer"
               className="transition hover:text-white"
