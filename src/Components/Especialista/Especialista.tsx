@@ -24,9 +24,12 @@ const Especialista = () => {
             Sabemos selecionar a matéria-prima ideal para a sua produção
           </h2>
 
-          <div className='mt-8 space-y-8'>
-            {itens.map((item) => (
-              <div key={item.numero} className='flex items-start gap-4'>
+          <div className='mt-8 space-y-8 md:space-y-10'>
+            {itens.map((item, index) => (
+              <div
+                key={item.numero}
+                className={`flex items-start gap-4 ${index !== itens.length - 1 ? 'pb-8 md:pb-5' : ''}`}
+              >
                 <div className='flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-[#FC6E20] text-xl font-light text-[#FC6E20]'>
                   {item.numero}
                 </div>

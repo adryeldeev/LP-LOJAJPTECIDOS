@@ -18,11 +18,11 @@ const Header = () => {
 
           {/* Texto por cima */}
           <div className="relative z-10 flex flex-col justify-center items-start px-6 md:px-12 py-12 text-white">
-            <h1 className="text-2xl md:text-4xl font-bold leading-snug">
-              Tecidos Jeans de Qualidade <br /> para Sua Confecção
+            <h1 className="text-2xl md:text-5xl font-bold leading-snug">
+              Tecidos Jeans de Qualidade <br className="md:hidden" /> para Sua Confecção
             </h1>
-            <p className="mt-4 text-base md:text-lg text-gray-300 max-w-md">
-              Há mais de 20 anos fornecendo jeans, retalhos e algodãozinho em Fortaleza.
+            <p className="mt-4 text-base md:text-lg text-gray-300 max-w-md leading-relaxed">
+              Há mais de 20 anos fornecendo jeans, <br className="md:hidden" /> retalhos e algodãozinho em Fortaleza.
             </p>
             <a href="https://wa.me/5585985661823" target="_blank" rel="noopener noreferrer" className="cursor-pointer mt-6 flex items-center gap-2 bg-[#FC6E20] text-white font-medium px-6 py-3 rounded-full hover:bg-[#e55d15] transition">
               Peça um orçamento

@@ -6,11 +6,11 @@ const Depoimentos = () => {
     },
     {
       nome: 'João P.',
-      descricao: '“Excelente qualidade e ótimo atendimento. Sempre compro aqui.”',
+      descricao: '“Ótimo atendimento e produtos de qualidade. Recomendo!”',
     },
     {
       nome: 'Carla R.',
-      descricao: '“Excelente qualidade e ótimo atendimento. Sempre compro aqui.”',
+      descricao: '“Me ajudou muito a encontrar o que eu precisava.”',
     },
   ]
 

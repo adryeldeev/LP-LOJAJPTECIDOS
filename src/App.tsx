@@ -17,10 +17,10 @@ function App() {
     <>
       <Nav/>
 
-      <div className="relative md:pb-20">
+      <div className="relative md:pb-24">
         <Header/>
 
-        <div className="absolute bottom-0 left-1/2 z-20 flex w-full -translate-x-1/2 translate-y-1/2 justify-center px-4">
+        <div className="mt-6 px-4 md:absolute md:bottom-0 md:left-1/2 md:z-20 md:flex md:w-full md:-translate-x-1/2 md:translate-y-1/2 md:justify-center md:px-4">
           <Estatisticas />
         </div>
       </div>
