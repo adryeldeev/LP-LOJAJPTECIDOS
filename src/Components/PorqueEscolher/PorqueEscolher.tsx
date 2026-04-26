@@ -1,61 +1,56 @@
-import React from "react";
-import { FaCheck } from "react-icons/fa";
-import tecidoImage from "../../assets/Img/imgSobre.png"; // substitua pelo caminho da sua imagem
-
 const PorQueEscolher = () => {
+  const pilares = [
+    {
+      percentual: '98%',
+      titulo: 'de Pontualidade',
+      descricao:
+        'Garantia de que a produção do cliente não vai parar por falta de tecido.',
+    },
+    {
+      percentual: '92%',
+      titulo: 'de Fidelidade',
+      descricao:
+        'Clientes que confiam na curadoria da JP Tecidos ano após ano.',
+    },
+    {
+      percentual: '83%',
+      titulo: 'de Variedade',
+      descricao:
+        'Um catálogo pensado para atender desde o jeans básico até tecidos finos.',
+    },
+    {
+      percentual: '97%',
+      titulo: 'de Aprovação',
+      descricao:
+        'Qualidade técnica comprovada por quem entende de costura e confecção.',
+    },
+  ]
+
   return (
-    <section className="w-full bg-white py-16 px-6 md:px-24 flex flex-col md:flex-row items-center gap-12">
-      
-      {/* Texto */}
-      <div className="md:w-1/2">
-        <h2 className="text-3xl font-bold text-black  mb-4">
-          Por que escolher a JP Tecidos?
-        </h2>
-        <p className="text-gray-700 mb-6">
-          Na hora de escolher rolos, malhas e algodãozinho de qualidade, é essencial contar com uma empresa que alia tradição, inovação e compromisso com a excelência. 
-          Com anos de experiência no setor têxtil, a JP Tecidos se destaca pelo atendimento próximo e produtos que garantem durabilidade, conforto e beleza.
-        </p>
+    <section id='pilares' className='page-section'>
+      <div className='section-container rounded-3xl bg-white p-8 md:p-14'>
+        <h3 className='section-title mx-auto max-w-4xl text-center text-[#111827]'>
+          Por que mais de 1200 empresas confiaram em negócios com a JP Tecidos?
+        </h3>
 
-        <ul className="space-y-3 mb-6">
-          <li className="flex items-start gap-3">
-            <FaCheck className="text-green-500 mt-1" />
-            <span><strong>Variedade de produtos:</strong> rolos, malhas e algodãozinho para qualquer projeto</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <FaCheck className="text-green-500 mt-1" />
-            <span><strong>Qualidade garantida:</strong> tecidos resistentes, macios e duráveis</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <FaCheck className="text-green-500 mt-1" />
-            <span><strong>Atendimento especializado:</strong> ajudamos você a escolher o tecido perfeito</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <FaCheck className="text-green-500 mt-1" />
-            <span><strong>Entrega rápida e segura:</strong> recebimento dos produtos no prazo e com cuidado</span>
-          </li>
-        </ul>
-
-        <div className="flex flex-wrap gap-4">
-          <button className="cursor-pointer flex items-center gap-2 bg-[#f26522] hover:bg-[#d9531f] text-white text-sm font-medium px-5 py-3 rounded-full transition">
-            Saiba mais
-          </button>
-          <button className="cursor-pointer flex items-center gap-2 bg-[#f26522] hover:bg-[#d9531f] text-white text-sm font-medium px-5 py-3 rounded-full transition">
-            Faça um orçamento
-          </button>
+        <div className='mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4'>
+          {pilares.map((pilar) => (
+            <article key={pilar.titulo} className='rounded-2xl border border-[#f0f0f0] bg-white p-8 hover:shadow-sm transition hover:-translate-y-1'>
+              <p className='text-6xl font-light leading-none text-[#FC6E20]'>
+                {pilar.percentual}
+              </p>
+              <p className='mt-2 text-[20px] font-semibold leading-tight text-[#111827] md:text-[22px]'>
+                {pilar.titulo}
+              </p>
+              <p className='mt-3 text-base leading-relaxed text-[#6b7280]'>
+                {pilar.descricao}
+              </p>
+            </article>
+          ))}
         </div>
       </div>
-
-      {/* Imagem */}
-      <div className="md:w-1/2">
-        <img 
-          src={tecidoImage} 
-          alt="Loja JP Tecidos" 
-          className="w-full rounded-lg shadow-lg"
-        />
-      </div>
-
     </section>
-  );
-};
+  )
+}
 
 export default PorQueEscolher;

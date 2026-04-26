@@ -1,4 +1,3 @@
-import React from 'react'
 import retalhos from '../../assets/Img/retalhos.png'
 import rolos from '../../assets/Img/rolos.png'
 import algodaozinho from '../../assets/Img/algodaozinho.png'
@@ -7,42 +6,41 @@ const Servicos = () => {
   const servicos = [
     {
       img: retalhos,
-      titulo: "Retalhos",
-      descricao: "Variedade de retalhos jeans para pequenas criações."
+      titulo: 'Retalhos',
+      descricao: 'Curadoria de retalhos premium, ideais para prototipagem de coleções ou produções artesanais de alto valor agregado.',
     },
     {
       img: rolos,
-      titulo: "Rolos",
-      descricao: "Rolos de jeans direto da fábrica, vendidos por metro ou kg."
+      titulo: 'Rolos',
+      descricao: 'Fornecimento em larga escala para produções contínuas. Tecidos com padronização técnica, prontos para otimizar o seu fluxo de corte e costura',
     },
     {
       img: algodaozinho,
-      titulo: "Algodãozinho",
-      descricao: "Tecidos leves e confortáveis, perfeitos para acabamentos."
-    }
+      titulo: 'Algodãozinho',
+      descricao: 'A base essencial para o desenvolvimento de moldagens e acabamentos internos que exigem toque suave e respirabilidade.',
+    },
   ]
 
   return (
-    <div className="w-full bg-[#212529] py-10">
-      <h2 className="text-white text-2xl font-semibold text-center mb-10">
-        Nossos Serviços
-      </h2>
+    <section id="produtos" className="page-section">
+      <div className="section-container">
+        <h2 className="section-title mb-12 text-center text-[#111827]">
+          Nossos Produtos
+        </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-18 max-w-6xl mx-auto px-6">
-        {servicos.map((item, index) => (
-          <div key={index} className="relative flex flex-col items-center">
-            <img src={item.img} alt={item.titulo} className="w-full h-66 object-cover" />
-
-            <div className="absolute -bottom-8 left-10 flex bg-white px-4 py-3 items-start w-[90%] shadow-lg border-l-4 border-orange-500">
-  <div className="flex flex-col">
-    <h4 className="font-semibold">{item.titulo}</h4>
-    <span className="text-sm text-gray-700">{item.descricao}</span>
-  </div>
-</div>
-          </div>
-        ))}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 ">
+          {servicos.map((item, index) => (
+            <article key={index} className="overflow-hidden rounded-3xl border border-[#f0f0f0] bg-white hover:shadow-sm transition hover:-translate-y-1">
+              <img src={item.img} alt={item.titulo} className="h-72 w-full object-cover" />
+              <div className="p-8">
+                <h3 className="section-subtitle text-[#111827]">{item.titulo}</h3>
+                <p className="section-text mt-2 text-[#4b5563]">{item.descricao}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

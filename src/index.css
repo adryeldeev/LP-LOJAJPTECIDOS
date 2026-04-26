@@ -12,6 +12,20 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html,
+body,
+#root {
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 @theme {
   --radius: 0.625rem;
   --radius-sm: calc(var(--radius) - 4px);
@@ -92,5 +106,50 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-color: #ffffff;
+    color: #111827;
+  }
+}
+
+@layer components {
+  .page-section {
+    @apply w-full px-4 md:px-8;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    .page-section {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  .section-container {
+    width: min(100%, 72rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-title {
+    @apply text-[38px] md:text-[54px] font-light leading-[1.15] tracking-tight;
+  }
+
+  .hero-text {
+    @apply text-[17px] leading-loose;
+  }
+
+  .section-title {
+    @apply text-[28px] md:text-[38px] font-light leading-snug tracking-wide;
+  }
+
+  .section-subtitle {
+    @apply text-[20px] md:text-[22px] font-medium leading-snug;
+  }
+
+  .section-text {
+    @apply text-[16px] leading-loose;
   }
 }

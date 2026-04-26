@@ -2,18 +2,17 @@ import { FaWhatsapp } from "react-icons/fa";
 import tecidoImg from '../../assets/Img/image1.png'
 import vector from '../../assets/Img/Vector1.png'
 
-
 const Header = () => {
   return (
-    <header className="w-full">
+    <header id="inicio" className="w-full">
       <div className="grid grid-cols-1 md:grid-cols-2 w-full relative">
-        
+
         {/* Lado esquerdo */}
-        <div className="relative flex items-center justify-center ">
+        <div className="relative flex items-center justify-center">
           {/* Vector de fundo */}
-          <img 
-            src={vector} 
-            alt="Vector decorativo" 
+          <img
+            src={vector}
+            alt="Vector decorativo"
             className="absolute inset-0 w-full h-full object-cover"
           />
 
@@ -34,17 +33,16 @@ const Header = () => {
 
         {/* Lado direito */}
         <div className="flex justify-center items-center p-6">
-          <img 
-            src={tecidoImg} 
-            alt="Rolos de tecido jeans" 
+          <img
+            src={tecidoImg}
+            alt="Rolos de tecido jeans"
             className="w-full max-w-sm rounded-2xl object-cover"
           />
         </div>
       </div>
-
-     
     </header>
   )
 }
 
 export default Header
+
