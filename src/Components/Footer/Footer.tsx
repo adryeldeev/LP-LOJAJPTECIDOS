@@ -38,7 +38,7 @@ const Footer = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://wa.me/5585985661823"
+              href={(window as { WA_LINK?: string }).WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="transition hover:text-white"

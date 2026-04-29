@@ -22,7 +22,7 @@ const Localizacao = () => {
               </p>
 
               <a
-                href='https://wa.me/5585985661823'
+                href={(window as { WA_LINK?: string }).WA_LINK}
                 target='_blank'
                 rel='noopener noreferrer'
                 className='mx-auto inline-flex w-fit items-center justify-center rounded-full bg-[#ff6a1a] px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#ff7e38] md:mx-0 md:text-base'

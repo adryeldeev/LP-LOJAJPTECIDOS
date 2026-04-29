@@ -18,13 +18,13 @@ const CTA = () => {
         </p>
 
         <a
-          href='https://wa.me/5585985661823'
+          href={(window as { WA_LINK?: string }).WA_LINK}
           target='_blank'
           rel='noopener noreferrer'
           className='mt-10 inline-flex items-center gap-3 rounded-full bg-[#FC6E20] px-8 py-4 text-[16px] font-medium text-white transition hover:bg-[#e55d15]'
         >
           <FaWhatsapp className='text-2xl' />
-          Falar com um especialista agora
+          Falar com um especialista
         </a>
       </div>
     </section>
