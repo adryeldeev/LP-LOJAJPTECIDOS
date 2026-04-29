@@ -4,11 +4,11 @@ import vector from '../../assets/Img/Vector1.png'
 
 const Header = () => {
   return (
-    <header id="inicio" className="w-full">
+    <header id="inicio" className="w-full text-white">
       <div className="grid grid-cols-1 md:grid-cols-2 w-full relative">
 
         {/* Lado esquerdo */}
-        <div className="relative flex items-center justify-center">
+        <div className="relative flex items-center justify-center px-6 md:px-25 py-12">
           {/* Vector de fundo */}
           <img
             src={vector}
